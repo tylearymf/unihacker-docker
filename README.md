@@ -1,5 +1,8 @@
 # unihacker-docker [English Doc](https://github.com/tylearymf/unihacker-docker/blob/main/README_EN.md)
 
+[![Docker Stars](https://img.shields.io/docker/stars/tylearymf/unihacker.svg)](https://hub.docker.com/r/tylearymf/unihacker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tylearymf/unihacker.svg)](https://hub.docker.com/r/tylearymf/unihacker)
+
 [UniHacker](https://github.com/tylearymf/UniHacker)
 
 # Docker 镜像
@@ -15,7 +18,7 @@
 ```
 docker run -it -v /opt -v /root --name=<你的容器名> unityci/editor:<Unity tag>
 
-如：docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:unityci/editor:2021.3.13f1-base-1.0.1
+如：docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:2021.3.13f1-base-1.0.1
 ```
 
 # 使用说明

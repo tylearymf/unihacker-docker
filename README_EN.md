@@ -1,5 +1,8 @@
 # unihacker-docker
 
+[![Docker Stars](https://img.shields.io/docker/stars/tylearymf/unihacker.svg)](https://hub.docker.com/r/tylearymf/unihacker)
+[![Docker Pulls](https://img.shields.io/docker/pulls/tylearymf/unihacker.svg)](https://hub.docker.com/r/tylearymf/unihacker)
+
 [UniHacker](https://github.com/tylearymf/UniHacker)
 
 # Docker Image
@@ -15,7 +18,7 @@
 ```
 docker run -it -v /opt -v /root --name=<your container name> unityci/editor:<unity tag>
 
-For example: docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:unityci/editor:2021.3.13f1-base-1.0.1
+For example: docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:2021.3.13f1-base-1.0.1
 ```
 
 # Usage
