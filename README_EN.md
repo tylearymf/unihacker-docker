@@ -38,9 +38,9 @@ For example: docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/ed
 ## Command
 
 ```
-docker run --rm -it --name=unihacker --env UNITY_PATH=<unity path> --env EXEC_METHOD=<execute method> --volumes-from <unity container name> unihacker latest
+docker run --rm -it --name=unihacker --env UNITY_PATH=<unity path> --env EXEC_METHOD=<execute method> --volumes-from <unity container name> tylearymf/unihacker latest
 
-For example: docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 unihacker latest
+For example: docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 tylearymf/unihacker latest
 ```
 
 # Attention

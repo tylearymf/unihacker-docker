@@ -38,9 +38,9 @@ docker run -it -v /opt -v /root --name=<你的容器名> unityci/editor:<Unity t
 ## 命令说明
 
 ```
-docker run --rm -it --name=unihacker --env UNITY_PATH=<Unity路径> --env EXEC_METHOD=<要执行的方法> --volumes-from <Unity容器名> unihacker latest
+docker run --rm -it --name=unihacker --env UNITY_PATH=<Unity路径> --env EXEC_METHOD=<要执行的方法> --volumes-from <Unity容器名> tylearymf/unihacker latest
 
-如：docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 unihacker latest
+如：docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 tylearymf/unihacker latest
 ```
 
 # 注意
