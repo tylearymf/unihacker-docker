@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "unihacker", "unihacker.csproj", "{B05788C1-53D3-43B5-87A2-42C22C44D205}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B05788C1-53D3-43B5-87A2-42C22C44D205}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B05788C1-53D3-43B5-87A2-42C22C44D205}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B05788C1-53D3-43B5-87A2-42C22C44D205}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B05788C1-53D3-43B5-87A2-42C22C44D205}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8D2CF2F3-814A-4D51-B9E0-4F90657EC3D2}
+	EndGlobalSection
+EndGlobal
