@@ -20,40 +20,40 @@ namespace UniHacker
         {
             var unityPath = Environment.GetEnvironmentVariable(UNITY_PATH, EnvironmentVariableTarget.Process);
             var execMethod = Environment.GetEnvironmentVariable(EXEC_METHOD, EnvironmentVariableTarget.Process);
-            MessageBox.Show($"Argument.\n" +
+            await MessageBox.Show($"Argument.\n" +
                 $"\t\t{UNITY_PATH}:{unityPath}\n" +
                 $"\t\t{EXEC_METHOD}:{execMethod}\n");
 
             if (!PlatformUtils.IsAdministrator)
             {
-                MessageBox.Show("Please run as an administrator.");
+                await MessageBox.Show("Please run as an administrator.");
                 return;
             }
 
             var unityFilePath = Path.Combine(unityPath, "Editor/Unity");
             if (!File.Exists(unityFilePath))
             {
-                MessageBox.Show($"The Unity file does not exist. '{unityFilePath}'");
+                await MessageBox.Show($"The Unity file does not exist. '{unityFilePath}'");
                 return;
             }
 
             var patcher = PatchManager.GetPatcher(unityFilePath, PlatformUtils.GetPlatformType());
             var status = patcher?.PatchStatus ?? PatchStatus.Unknown;
-            MessageBox.Show($"Info.\n" +
-                $"\t\tVersion:{patcher?.FileVersion}\n" +
-                $"\t\t{MachineArchitecture.GetArchitectureName(patcher?.ArchitectureType ?? ArchitectureType.UnKnown)}\n" +
+            var architectureName = MachineArchitecture.GetArchitectureName(patcher?.ArchitectureType ?? ArchitectureType.UnKnown);
+            await MessageBox.Show($"Information.\n" +
+                $"\t\tVersion:{patcher?.FileVersion}({architectureName})\n" +
                 $"\t\tStatus: {status}\n" +
                 $"\t\tPlatform:{PlatformUtils.GetPlatformType()}\n");
 
             if (patcher == null || patcher.PatchStatus == PatchStatus.Unknown)
             {
-                MessageBox.Show($"Unknown binary file. '{unityFilePath}'");
+                await MessageBox.Show($"Unknown binary file. '{unityFilePath}'");
                 return;
             }
 
-            if (!MethodNames.Contains(execMethod))
+            if (!MethodNames.Contains(execMethod!))
             {
-                MessageBox.Show($"Unknown '{EXEC_METHOD}' parameter: {execMethod}");
+                await MessageBox.Show($"Unknown '{EXEC_METHOD}' parameter: {execMethod}");
                 return;
             }
 
@@ -76,11 +76,11 @@ namespace UniHacker
                         }
                         break;
                 }
-                MessageBox.Show($"Successfully {execMethod}.");
+                await MessageBox.Show($"Successfully {execMethod}.");
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.ToString());
+                await MessageBox.Show(ex.ToString());
             }
         }
     }
