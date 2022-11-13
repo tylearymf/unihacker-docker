@@ -84,7 +84,7 @@ For example:
 ```
 docker run --rm -it --name=unihacker --env UNITY_PATH=<unity file path> --env EXEC_METHOD=<execute method> --volumes-from <unity container name> tylearymf/unihacker latest
 
-For example: docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity/Editor/Unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 tylearymf/unihacker latest
+For example: docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity/Editor/Unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.12f1-android tylearymf/unihacker latest
 ```
 
 ## UNITY HUB Command
