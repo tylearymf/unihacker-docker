@@ -13,10 +13,13 @@
 
 # 前置步骤
 
-### 运行Unity必须指定volume 'opt' 和 'root'
+### 运行Unity必须指定volume 
+
+* volume opt ：用于查找Unity文件
+* volume root ：用于生成许可证文件
 
 ```
-docker run -it -v /opt -v /root --name=<你的容器名> unityci/editor:<Unity tag>
+docker run -it -v /opt -v /root --name=<Unity的容器名> unityci/editor:<Unity tag>
 
 如：docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:2021.3.13f1-base-1.0.1
 ```
@@ -45,7 +48,7 @@ docker run -it -v /opt -v /root --name=<你的容器名> unityci/editor:<Unity t
 ## 命令说明
 
 ```
-docker run --rm -it --name=unihacker --env UNITY_PATH=<Unity路径> --env EXEC_METHOD=<要执行的方法> --volumes-from <Unity容器名> tylearymf/unihacker latest
+docker run --rm -it --name=unihacker --env UNITY_PATH=<Unity路径> --env EXEC_METHOD=<要执行的方法> --volumes-from <Unity的容器名> tylearymf/unihacker latest
 
 如：docker run --rm -it --name=unihacker --env UNITY_PATH=/opt/unity --env EXEC_METHOD=PATCH --volumes-from unity-2021.3.13f1 tylearymf/unihacker latest
 ```
@@ -60,5 +63,6 @@ chmod +x <Unity路径>/Editor/Unity
 如：chmod +x /opt/unity/Editor/Unity
 ```
 
+# 免责声明
 
-
+本软件的任何使用仅用于非营利性的教育和测试目的。

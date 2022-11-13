@@ -13,10 +13,13 @@
 
 # Precondition
 
-### Running Unity must specify volumes 'opt' and 'root'
+### Running Unity must specify volumes
+
+* volume opt ：Used to find Unity files
+* volume root ：Used to generate license files
 
 ```
-docker run -it -v /opt -v /root --name=<your container name> unityci/editor:<unity tag>
+docker run -it -v /opt -v /root --name=<unity container name> unityci/editor:<unity tag>
 
 For example: docker run -it -v /opt -v /root --name=unity-2021.3.13f1 unityci/editor:2021.3.13f1-base-1.0.1
 ```
@@ -60,5 +63,6 @@ chmod +x <unity path>/Editor/Unity
 For example: chmod +x /opt/unity/Editor/Unity
 ```
 
+# Legal Disclaimer
 
-
+Any use of this software is for non-profit education and testing purposes only.
