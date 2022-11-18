@@ -248,6 +248,13 @@ namespace UniHacker
             },
             new()
             {
+                // 2019.4.10
+                Version = "2019.4.10",
+                LightPattern = ToBytes(ToArray("C3 6E FF 80 B8 69 4C 00 00 00 74 5D"), ToArray("FE BB 02 00 00 00 45 84 E4 0F 84 3E 02")),
+                DarkPattern = ToBytes(ToArray("C3 6E FF 80 B8 69 4C 00 00 00 EB 5D"), ToArray("FE BB 02 00 00 00 45 84 E4 0F 85 3E 02")),
+            },
+            new()
+            {
                 // 2019.3.15、2019.4.28、2019.4.35、2019.4.40、2019.4.39、2019.4.38、2019.4.37
                 Version = "2019",
                 LightPattern = ToBytes(ToArray("? FF 80 B8 69 4C 00 00 00 74 5D"), ToArray("FD BB 02 00 00 00 45 84 ? 0F 84 ? 02")),
@@ -429,9 +436,16 @@ namespace UniHacker
             new()
             {
                 // 2022.1.15
-                Version = "2022",
+                Version = "2022.1.15",
                 LightPattern = ToBytes(ToArray("0F 84 A7 00 00 00 48 8B 35 D8 CE 27"), ToArray("84 36 01 00 00 48 8D B4 24 A8")),
                 DarkPattern = ToBytes(ToArray("E9 A8 00 00 00 00 48 8B 35 D8 CE 27"), ToArray("85 36 01 00 00 48 8D B4 24 A8")),
+            },
+            new()
+            {
+                // 2022.1.23
+                Version = "2022",
+                LightPattern = ToBytes(ToArray("0F 84 A7 00 00 00 48 8B 35 D0 14 29 01"), ToArray("84 C0 0F 84 36 01 00 00 48 8D B4 24 A8")),
+                DarkPattern = ToBytes(ToArray("E9 A8 00 00 00 00 48 8B 35 D0 14 29 01"), ToArray("84 C0 0F 85 36 01 00 00 48 8D B4 24 A8")),
             },
         };
 
